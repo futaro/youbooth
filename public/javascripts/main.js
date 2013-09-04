@@ -241,7 +241,9 @@ YBMain.prototype = {
 	},
 
   nextCue: function() {
-    this.socket.emit('video.nextCue', {});
+    if (confirm('sure?')) {
+      this.socket.emit('video.nextCue', {});
+    }
   },
 	
 	sendChatMessage: function() {
