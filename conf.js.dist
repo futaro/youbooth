@@ -1,0 +1,11 @@
+module.exports = {
+	db: {
+		db: "youbooth",
+		user: "user",
+		password: "pass"
+	}
+  , fb: {
+    appId: '000000000000000'
+      , appSecret: '00000000000000000000000000000000'
+    }
+};

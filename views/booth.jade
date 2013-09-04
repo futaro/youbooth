@@ -1,0 +1,45 @@
+script
+  window.booth_name='!{booth_name}'
+script(src='/socket.io/socket.io.js')
+script(src='/javascripts/swfobject.js')
+script(src='/javascripts/main.js')
+div(id="booth")
+  div(id="header")
+    h1(id="logo") YouBooth #!{booth_name}
+      span(id="vtitle")
+    nav
+      ul
+        li
+          a(href="#", id="btn_chat", target="chat") chat
+        li
+          a(href="#", id="btn_add", target="add") add
+        li
+          a(href="#", id="btn_cues", target="cues") cues
+        li
+          a(href="#", id="btn_nextcue", target="nextcue") next
+        li
+          a(href='/logout') logout
+  div(id="container")
+    div(id="video")
+      div(id="mainplayer_field")
+  div(id="footer")
+    div(id="vtitle")
+
+div(id="floating")
+  div(id="add", class="item")
+    h2 search
+    form(id="search_form")
+      input(id="search_box", type="text")
+      input(type="submit", value="search")
+      div(id="results")
+        ul
+  div(id="chat", class="item")
+    h2 caht
+    form(id="chat")
+      input(id="chatbox", type="text")
+      input(type="submit", value="send")
+    div(id="chatarea")
+  div(id="cues", class="item")
+    h2 cues
+    ul(id="cue_list")
+

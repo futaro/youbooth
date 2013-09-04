@@ -1,0 +1,47 @@
+- if (!everyauth.loggedIn)
+  script(src='http://static.ak.fbcdn.net/connect/en_US/core.js')
+  h2 Login
+  #fb-login.fb_button(style='background-position: left -188px')
+    a.fb_button_medium(href='/auth/facebook')
+      span#fb_login_text.fb_button_text
+        Connect with Facebook
+- else
+  h2 Booths
+  ul(id="boothlist")
+    each bth, i in booths
+      li 
+        a(href="/booth/#{bth.name}") #{bth.name}(#{bth.booth_user_count})
+  h2 Create Booth
+  form(id="booth_form")
+    span # 
+    input(id="booth_name", name="booth_name")
+    input(type="submit", value="create")
+    br
+    label 
+      input(type="checkbox", value="1", name="is_private")
+      span secret
+      
+  script
+    $(function(){
+      $('#booth_form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "/booth/create",
+          data: $("#booth_form").serialize(),
+          success: function(data) {
+            if (data.status) {
+              location.href = data.path;
+            } else {
+              alert(data.message);
+            }
+          }
+        });
+        /*
+        if ($("#booth_name").val()) {
+          location.href="/booth/"+$("#booth_name").val();
+        }
+        */
+        return false;
+      });
+    });

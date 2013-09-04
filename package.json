@@ -1,0 +1,12 @@
+{
+    "name": "application-name"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "connect": "2.2.0"
+    , "express": "2.5.8"
+    , "jade": ">= 0.0.1"
+    , "passport": ">= 0.0.1"
+    , "passport-facebook": ">= 0.0.1"
+  }
+}

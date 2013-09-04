@@ -1,0 +1,6 @@
+.trash
+.DS_Store
+node_modules
+conf.js
+nohup.out
+

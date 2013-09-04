@@ -1,0 +1,219 @@
+@import 'reset.css';
+
+html {
+	background-color: #000000;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*width: 1240px;
+  border: 1px solid red;*/
+  background-color: #000000;
+  color: #FFF;
+}
+
+a {
+  color: #00B7FF;
+}
+
+input[type=text] {
+	border: 1px solid #CCC;
+	background: black;
+	color: #FFF;
+	padding: 2px;
+	width: 360px;
+}
+input[type=submit] {
+	border: 1px solid #000;
+	background: #FFF;
+	color: #000;
+	margin: 0 5px;
+	padding: 2px;
+	font-size: 12px;
+} 
+
+#header{
+	width: 100%;
+	height: 46px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url('../images/trans_black.png');
+	z-index: 300;
+	padding: 0;
+	left: 0;
+}
+
+#container {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+
+
+h1#logo {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px;
+}
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#vtitle {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+nav {
+	display: block;
+	height: 46px;
+	position: absolute; top: 0; right: 0;
+}
+nav ul li{
+	height: 46px;
+	line-height: 46px;
+	float: left;
+	list-style: none;
+	text-align: center;
+}
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: #999;
+	padding: 0 10px;
+}
+nav ul li a:hover{
+	display: block;
+	color: #FFF;
+}
+
+
+
+#floating{
+	position: absolute; top: 46px; left: 0;
+	z-index: 200;
+	width: 100%;
+	min-height: 100%;
+}
+
+	#floating .item {
+		width: 460px;
+		min-height: 100%;
+		/*margin-right: auto;*/
+		position: absolute; right: 0; top: 0;
+		text-align: right;
+		padding: 20px;
+		background: url('../images/trans_black.png');
+		/*border : 1px solid #888;*/
+		display: none;
+	}
+
+
+#video object {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+
+
+
+
+
+
+
+div#logout {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+#results ul li {
+	display: block;
+	width: 140px;
+	height: 150px;
+	padding: 5px;
+	float: left;
+	font-size: 10px;
+}
+#results ul li img {
+	display: block;
+	margin: 0 auto;
+}
+#results ul li img.searched_video{
+	cursor: pointer;
+}
+
+
+#results div.more {
+	text-align: center;
+}
+#results div.more a{
+	background: #FFF;
+	color: #000;
+	width: 100%;
+	display: block;
+	padding: 10px 0;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+#chatarea ul li {
+	font-size: 12px;
+	margin-top: 10px;
+}
+#chatarea ul li span {
+	font-size: 10px;
+	color: #666;
+}
+#chatarea ul li img {
+	margin: 4px 0 0 10px;
+	height: 25px;
+	width: 25px;
+}
+
+#chatarea ul li div.pic{
+	float: right;
+	width: 35px;
+}
+#chatarea ul li div.msg{
+	float: right;
+	width: 400px;
+}
+
+
+ul#boothlist{
+	
+}
+ul#boothlist li{
+	float: left;
+	font-size: 30px;
+	padding: 5px;
+}
+
+/*あああああああああああああああああああああああああああああああああああいいいいいいいいいいいいいいいいいいいいいいいいいううううううううううううううううううう*/
+
+
+/* clearfix */
+
+#results ul, nav ul, #chatarea ul li, ul#boothlist{
+   ⁄zoom:1;
+}
+
+#results ul:after, nav ul:after, #chatarea ul li:after, ul#boothlist:after {
+   content:'';
+   display:block;
+   clear:both;
+}
+
+
